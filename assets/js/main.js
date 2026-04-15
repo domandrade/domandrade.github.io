@@ -49,7 +49,7 @@
       const tick = (t) => {
         const p = Math.min(1, (t - start) / dur);
         const v = Math.floor(end * (1 - Math.pow(1 - p, 3)));
-        el.textContent = v.toLocaleString();
+        el.textContent = el.dataset.raw === 'true' ? String(v) : v.toLocaleString();
         if (p < 1) requestAnimationFrame(tick);
       };
       requestAnimationFrame(tick);
