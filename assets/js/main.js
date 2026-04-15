@@ -107,9 +107,9 @@
   const items = [
     { label: 'Home', sub: 'index.html', href: './index.html' },
     { label: 'Experience', sub: 'experience.html', href: './experience.html' },
+    { label: 'Resume', sub: 'resume.html', href: './resume.html' },
+    { label: 'Download resume PDF', sub: 'assets/Dominic-Andrade-Resume.pdf', href: 'assets/Dominic-Andrade-Resume.pdf' },
     { label: 'Contact', sub: 'contact.html', href: './contact.html' },
-    { label: 'The Rink 🏒', sub: 'shootout mini-game', href: './rink.html' },
-    { label: 'Arcade 🧩', sub: 'crown court puzzle', href: './arcade.html' },
     { label: 'Email Dominic', sub: 'domhg30@gmail.com', href: 'mailto:domhg30@gmail.com' },
     { label: 'LinkedIn', sub: '/in/dominic-andrade', href: 'https://www.linkedin.com/in/dominic-andrade-235722251' },
     { label: 'Toggle theme', sub: 'light / dark', action: () => toggle && toggle.click() },

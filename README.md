@@ -10,10 +10,11 @@ Plain HTML, CSS, and vanilla JS. No build step — GitHub Pages serves the files
 ## Pages
 - `index.html` — hero, intro, highlights
 - `experience.html` — experience timeline, education, certifications, skills
+- `resume.html` — full résumé (with Download PDF + Print)
 - `contact.html` — email, LinkedIn, contact form (mailto)
-- `rink.html` — 🏒 hockey shootout mini-game (canvas)
-- `arcade.html` — 🧩 "Crown Court" — a Queens-style logic puzzle
 - `404.html` — friendly fallback
+
+The downloadable PDF lives at `assets/Dominic-Andrade-Resume.pdf`. Drop the latest résumé PDF there whenever it changes — no other code updates needed.
 
 ## Interactive extras
 - `⌘K` / `Ctrl+K` command palette (jump to any page, toggle theme, email, LinkedIn)

@@ -378,6 +378,44 @@ main { position: relative; z-index: 1; }
 .prose { color: var(--text-dim); max-width: 760px; line-height: 1.7; }
 .prose li { margin-bottom: 6px; }
 
+/* ===== Resume page ===== */
+.resume-head { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: flex-end; }
+.resume-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.resume-doc {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 40px clamp(20px, 4vw, 56px);
+  margin-top: 24px;
+  box-shadow: var(--shadow);
+}
+.resume-name { text-align: center; border-bottom: 2px solid var(--border); padding-bottom: 18px; margin-bottom: 22px; }
+.resume-name h2 { margin: 0 0 6px; font-size: 2rem; letter-spacing: .02em; }
+.resume-name p { margin: 0; color: var(--text-dim); }
+.resume-section { margin-top: 26px; }
+.resume-section h3 {
+  margin: 0 0 10px; font-size: 1.05rem; text-transform: uppercase; letter-spacing: .1em;
+  color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 6px;
+}
+.resume-block { margin-bottom: 18px; }
+.resume-head-row { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.resume-date { color: var(--muted); font-size: 0.9rem; white-space: nowrap; }
+.resume-role { margin: 2px 0 6px; font-style: italic; color: var(--text-dim); }
+.resume-doc ul { margin: 6px 0 0 18px; padding: 0; color: var(--text-dim); line-height: 1.6; }
+.resume-doc ul li { margin-bottom: 4px; }
+.resume-section.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+@media (max-width: 600px) { .resume-section.two-col { grid-template-columns: 1fr; } }
+
+@media print {
+  .site-header, .site-footer, .cursor-glow, .palette, .resume-actions { display: none !important; }
+  body { background: white !important; color: black !important; }
+  .resume-doc { border: none; box-shadow: none; padding: 0; background: white; }
+  .resume-section h3 { color: black; }
+  .resume-doc ul, .resume-role, .resume-name p, .resume-date { color: #333 !important; }
+  .page-head h1 { display: none; }
+  .lead { display: none; }
+}
+
 /* ===== Command palette ===== */
 .palette {
   position: fixed; inset: 0; background: rgba(0,0,0,0.5);
