@@ -1,0 +1,31 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+*~
+
+# Editors / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Claude / agent tooling
+.claude/
+CLAUDE.md
+
+# Personal source material — don't publish raw LinkedIn scrape
+info.txt
+
+# Node / build artifacts (if ever added)
+node_modules/
+dist/
+build/
+.env
+.env.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+*.log

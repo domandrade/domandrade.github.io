@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arcade — Dominic Andrade</title>
+  <meta name="description" content="A small logic puzzle in the spirit of LinkedIn's Queens — because Dominic plays it every day." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%235b2a86'/%3E%3Ctext x='50' y='66' font-family='Georgia' font-size='52' text-anchor='middle' fill='%23f5c451' font-weight='700'%3ED%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body data-page="arcade">
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="./index.html"><span class="brand-mark">DA</span><span class="brand-name">Dominic Andrade</span></a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="./index.html" class="nav-link">Home</a>
+      <a href="./experience.html" class="nav-link">Experience</a>
+      <a href="./contact.html" class="nav-link">Contact</a>
+      <a href="./rink.html" class="nav-link fun">🏒 The Rink</a>
+      <a href="./arcade.html" class="nav-link fun active">🧩 Arcade</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">
+      <span class="sun">☀</span><span class="moon">☾</span>
+    </button>
+  </header>
+
+  <main class="container narrow">
+    <section class="page-head">
+      <h1>🧩 Arcade</h1>
+      <p class="lead">I'm a daily Queens &amp; Zip player. So here's my own little 6×6 puzzle — <strong>Crown Court</strong>. Place one crown in every row, every column, and every colored region — and no two crowns may touch, not even diagonally. Click to place, click again to flag, click a third to clear.</p>
+    </section>
+
+    <section class="puzzle-wrap">
+      <div class="hud">
+        <div class="hud-box"><span class="hud-label">Time</span><span id="p-time" class="hud-val">0:00</span></div>
+        <div class="hud-box"><span class="hud-label">Crowns</span><span id="p-crowns" class="hud-val">0 / 6</span></div>
+        <button id="p-hint" class="btn ghost small">Hint</button>
+        <button id="p-new" class="btn ghost small">New puzzle</button>
+      </div>
+      <div id="puzzle" class="puzzle" role="grid" aria-label="Crown Court puzzle"></div>
+      <p id="p-status" class="muted small">Good luck.</p>
+    </section>
+
+    <section class="section reveal">
+      <h2 class="section-title">Rules, briefly</h2>
+      <ul class="prose">
+        <li>Exactly one 👑 in every row.</li>
+        <li>Exactly one 👑 in every column.</li>
+        <li>Exactly one 👑 in every colored region.</li>
+        <li>No two crowns may touch — not horizontally, vertically, or diagonally.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Dominic Andrade · Built for game day.</p>
+  </footer>
+
+  <div id="palette" class="palette" hidden>
+    <div class="palette-inner" role="dialog" aria-label="Command palette">
+      <input id="palette-input" type="text" placeholder="Jump to…" autocomplete="off" />
+      <ul id="palette-list"></ul>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/arcade.js" defer></script>
+</body>
+</html>

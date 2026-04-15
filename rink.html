@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Rink — Dominic Andrade</title>
+  <meta name="description" content="Take a shot on Dominic's mini hockey shootout — because a grounds crew member who plays club hockey needs a rink on his website." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%235b2a86'/%3E%3Ctext x='50' y='66' font-family='Georgia' font-size='52' text-anchor='middle' fill='%23f5c451' font-weight='700'%3ED%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body data-page="rink">
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="./index.html"><span class="brand-mark">DA</span><span class="brand-name">Dominic Andrade</span></a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="./index.html" class="nav-link">Home</a>
+      <a href="./experience.html" class="nav-link">Experience</a>
+      <a href="./contact.html" class="nav-link">Contact</a>
+      <a href="./rink.html" class="nav-link fun active">🏒 The Rink</a>
+      <a href="./arcade.html" class="nav-link fun">🧩 Arcade</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">
+      <span class="sun">☀</span><span class="moon">☾</span>
+    </button>
+  </header>
+
+  <main class="container">
+    <section class="page-head">
+      <h1>🏒 The Rink</h1>
+      <p class="lead">I play club hockey at Niagara. It felt wrong not to put a rink on my website. Drag from the puck, release to shoot. Beat the goalie before the shot clock dies. Five shots, best score wins.</p>
+    </section>
+
+    <section class="rink-wrap">
+      <div class="hud">
+        <div class="hud-box"><span class="hud-label">Score</span><span id="score" class="hud-val">0</span></div>
+        <div class="hud-box"><span class="hud-label">Shots</span><span id="shots" class="hud-val">0 / 5</span></div>
+        <div class="hud-box"><span class="hud-label">Best</span><span id="best" class="hud-val">—</span></div>
+        <button id="reset-game" class="btn ghost small">Reset</button>
+      </div>
+      <canvas id="rink" width="900" height="520" aria-label="Hockey shootout mini game"></canvas>
+      <p class="muted small">Tip: a longer drag = harder shot. The goalie gets faster each round.</p>
+    </section>
+
+    <section class="section reveal">
+      <h2 class="section-title">Why this is here</h2>
+      <p class="prose">A big part of event ops is being the person who <em>sees the whole game</em> — where's the crowd flow about to jam, which vendor is slipping, which exit needs a hand. Hockey taught me that read. So did dawn shifts on a grounds crew, where the course has to look perfect before the first tee time even knows you were there.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Dominic Andrade · Built for game day.</p>
+  </footer>
+
+  <div id="palette" class="palette" hidden>
+    <div class="palette-inner" role="dialog" aria-label="Command palette">
+      <input id="palette-input" type="text" placeholder="Jump to…" autocomplete="off" />
+      <ul id="palette-list"></ul>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/rink.js" defer></script>
+</body>
+</html>

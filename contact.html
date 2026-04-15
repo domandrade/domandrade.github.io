@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Dominic Andrade</title>
+  <meta name="description" content="Get in touch with Dominic Andrade — email and LinkedIn." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%235b2a86'/%3E%3Ctext x='50' y='66' font-family='Georgia' font-size='52' text-anchor='middle' fill='%23f5c451' font-weight='700'%3ED%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body data-page="contact">
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="./index.html"><span class="brand-mark">DA</span><span class="brand-name">Dominic Andrade</span></a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="./index.html" class="nav-link">Home</a>
+      <a href="./experience.html" class="nav-link">Experience</a>
+      <a href="./contact.html" class="nav-link active">Contact</a>
+      <a href="./rink.html" class="nav-link fun">🏒 The Rink</a>
+      <a href="./arcade.html" class="nav-link fun">🧩 Arcade</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">
+      <span class="sun">☀</span><span class="moon">☾</span>
+    </button>
+  </header>
+
+  <main class="container narrow">
+    <section class="page-head">
+      <h1>Let's talk.</h1>
+      <p class="lead">Recruiting for a sports / hospitality / event role? I'd love to hear about it. Quickest ways to reach me are below — and yes, those email &amp; LinkedIn cards are interactive.</p>
+    </section>
+
+    <section class="contact-grid">
+      <a class="contact-card flip" href="mailto:domhg30@gmail.com" aria-label="Email Dominic">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <div class="contact-ico">✉️</div>
+            <h3>Email</h3>
+            <p>Best for recruiting &amp; intro chats.</p>
+          </div>
+          <div class="flip-back">
+            <h3>domhg30@gmail.com</h3>
+            <p>Click to open your mail client →</p>
+          </div>
+        </div>
+      </a>
+
+      <a class="contact-card flip" href="https://www.linkedin.com/in/dominic-andrade-235722251" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <div class="contact-ico">in</div>
+            <h3>LinkedIn</h3>
+            <p>Full profile, recommendations, and reposts.</p>
+          </div>
+          <div class="flip-back">
+            <h3>/in/dominic-andrade</h3>
+            <p>Open in a new tab →</p>
+          </div>
+        </div>
+      </a>
+
+      <div class="contact-card static">
+        <div class="contact-ico">📍</div>
+        <h3>Based in</h3>
+        <p>Penfield, New York<br/><small>Open to relocation for the right role</small></p>
+      </div>
+
+      <div class="contact-card static">
+        <div class="contact-ico">🎓</div>
+        <h3>Status</h3>
+        <p>Senior at Niagara University · Graduating 2026<br/><small>Open to full-time &amp; summer opportunities</small></p>
+      </div>
+    </section>
+
+    <section class="form-wrap reveal">
+      <h2>Or drop a note</h2>
+      <p class="muted">This form opens your default email client pre-filled — no backend, no tracking.</p>
+      <form id="contact-form" class="contact-form">
+        <label>Your name
+          <input type="text" name="name" required />
+        </label>
+        <label>Your email
+          <input type="email" name="email" required />
+        </label>
+        <label>Subject
+          <input type="text" name="subject" value="Opportunity for Dominic" required />
+        </label>
+        <label>Message
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit" class="btn primary">Send via email →</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Dominic Andrade · Built for game day.</p>
+  </footer>
+
+  <div id="palette" class="palette" hidden>
+    <div class="palette-inner" role="dialog" aria-label="Command palette">
+      <input id="palette-input" type="text" placeholder="Jump to…" autocomplete="off" />
+      <ul id="palette-list"></ul>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
