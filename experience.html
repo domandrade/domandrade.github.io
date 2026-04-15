@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body data-page="experience">
+  <div class="cursor-glow" aria-hidden="true"></div>
+
   <header class="site-header">
     <a class="brand" href="./index.html"><span class="brand-mark">DA</span><span class="brand-name">Dominic Andrade</span></a>
     <nav class="site-nav" aria-label="Primary">
@@ -38,7 +40,7 @@
     </section>
 
     <section class="timeline">
-      <article class="tl-item" data-tags="sports ops">
+      <article class="tl-item reveal" data-tags="sports ops">
         <div class="tl-dot"></div>
         <div class="tl-card">
           <header>
@@ -54,7 +56,7 @@
         </div>
       </article>
 
-      <article class="tl-item" data-tags="hospitality ops">
+      <article class="tl-item reveal" data-tags="hospitality ops">
         <div class="tl-dot"></div>
         <div class="tl-card">
           <header>
@@ -67,7 +69,7 @@
         </div>
       </article>
 
-      <article class="tl-item" data-tags="ops">
+      <article class="tl-item reveal" data-tags="ops">
         <div class="tl-dot"></div>
         <div class="tl-card">
           <header>
@@ -79,7 +81,7 @@
         </div>
       </article>
 
-      <article class="tl-item" data-tags="hospitality">
+      <article class="tl-item reveal" data-tags="hospitality">
         <div class="tl-dot"></div>
         <div class="tl-card">
           <header>
@@ -94,7 +96,7 @@
     </section>
 
     <section class="split">
-      <div class="split-col">
+      <div class="split-col reveal">
         <h2 data-i18n="exp.edu.title">Education</h2>
         <div class="edu-card">
           <h3>Niagara University</h3>
@@ -110,7 +112,7 @@
         </div>
       </div>
 
-      <div class="split-col">
+      <div class="split-col reveal">
         <h2 data-i18n="exp.cert.title">Certifications</h2>
         <ul class="cert-list">
           <li data-i18n="exp.cert.servsafe" data-i18n-html><strong>ServSafe Food Handler</strong> <span>Mar 2024 – Mar 2027</span></li>
@@ -122,7 +124,7 @@
       </div>
     </section>
 
-    <section class="skills">
+    <section class="skills reveal">
       <h2 data-i18n="exp.skills.title">Skills</h2>
       <div class="skill-grid">
         <div class="skill"><span data-i18n="tag.eventmgmt">Event Management</span><div class="bar"><i style="--v:95%"></i></div></div>
@@ -138,8 +140,15 @@
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> Dominic Andrade · <span data-i18n="footer.tag">Sport &amp; Event Management · Niagara University</span></p>
+    <p>© <span id="year"></span> Dominic Andrade · <span data-i18n="footer.tag">Built for game day.</span></p>
   </footer>
+
+  <div id="palette" class="palette" hidden>
+    <div class="palette-inner" role="dialog" aria-label="Command palette">
+      <input id="palette-input" type="text" placeholder="Jump to…" data-i18n-attr="placeholder:palette.placeholderShort" autocomplete="off" />
+      <ul id="palette-list"></ul>
+    </div>
+  </div>
 
   <script src="assets/js/main.js" defer></script>
 </body>

@@ -17,8 +17,11 @@ Plain HTML, CSS, and vanilla JS. No build step — GitHub Pages serves the files
 The downloadable PDF lives at `assets/Dominic-Andrade-Resume.pdf`. Drop the latest résumé PDF there whenever it changes — no other code updates needed.
 
 ## Interactive extras
-- English / French language toggle (persisted to `localStorage`)
+- `⌘K` / `Ctrl+K` command palette (jump to any page, toggle theme, email, LinkedIn)
 - Light / dark theme toggle (persisted to `localStorage`)
+- Scroll-reveal animations and count-up stats
+- Cursor-follow glow on devices with hover
+- Animated marquee of teams & orgs
 
 ## Local preview
 Just open `index.html` in a browser, or serve the folder:

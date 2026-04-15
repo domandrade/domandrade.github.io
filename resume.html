@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body data-page="resume">
+  <div class="cursor-glow" aria-hidden="true"></div>
+
   <header class="site-header">
     <a class="brand" href="./index.html"><span class="brand-mark">DA</span><span class="brand-name">Dominic Andrade</span></a>
     <nav class="site-nav" aria-label="Primary">
@@ -135,8 +137,15 @@
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> Dominic Andrade · <span data-i18n="footer.tag">Sport &amp; Event Management · Niagara University</span></p>
+    <p>© <span id="year"></span> Dominic Andrade · <span data-i18n="footer.tag">Built for game day.</span></p>
   </footer>
+
+  <div id="palette" class="palette" hidden>
+    <div class="palette-inner" role="dialog" aria-label="Command palette">
+      <input id="palette-input" type="text" placeholder="Jump to…" data-i18n-attr="placeholder:palette.placeholderShort" autocomplete="off" />
+      <ul id="palette-list"></ul>
+    </div>
+  </div>
 
   <script src="assets/js/main.js" defer></script>
 </body>

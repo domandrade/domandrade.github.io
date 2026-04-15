@@ -10,7 +10,10 @@
       'nav.experience': 'Experience',
       'nav.resume': 'Resume',
       'nav.contact': 'Contact',
-      'footer.tag': 'Sport & Event Management · Niagara University',
+      'footer.tag': 'Built for game day.',
+      'footer.kbd': 'Try <kbd>⌘</kbd> <kbd>K</kbd> anywhere on the site.',
+      'palette.placeholder': 'Jump to… (home, experience, contact, rink, arcade, email, linkedin)',
+      'palette.placeholderShort': 'Jump to…',
       // page titles / meta descriptions
       'meta.home.title': 'Dominic Andrade — Sport & Event Management',
       'meta.home.desc': 'Dominic Andrade — senior at Niagara University studying Sport Management & Tourism Event Management. Rochester Red Wings ballpark operations intern.',
@@ -23,9 +26,10 @@
       'meta.404.title': 'Offside — Dominic Andrade',
       // home
       'home.eyebrow': 'Penfield, NY · Class of 2026',
-      'home.name': 'Dominic Andrade',
-      'home.role': 'Sport & Event Management',
-      'home.sub': 'Senior at Niagara University studying Sport Management and Tourism Event Management. Ballpark operations intern with the Rochester Red Wings at Innovative Field. Grounds crew at Midvale Country Club. Member of Eta Sigma Delta, the international honor society for hospitality and tourism.',
+      'home.hi': "Hi, I'm ",
+      'home.build': 'I build ',
+      'home.gde': 'game-day experiences',
+      'home.sub': 'Senior at Niagara University studying Sport Management &amp; Tourism Event Management. Recently behind the scenes at <strong>Innovative Field</strong> with the Rochester Red Wings and on the grounds at <strong>Midvale Country Club</strong> — still on the ice in club hockey.',
       'home.cta.exp': 'See my experience →',
       'home.cta.resume': 'View résumé',
       'home.cta.contact': 'Get in touch',
@@ -43,6 +47,7 @@
       'home.hl.title': 'A quick highlight',
       'home.hl.body': '"Tourism students from Niagara University joined inbound operators at <strong>IITA Summit 2026</strong> to experience the sector firsthand — a valuable behind-the-scenes look at how inbound business is built."',
       'home.hl.cite': '— International Inbound Travel Association',
+      'home.photo.cap': 'Off the clock — still chasing the lights.',
       // experience
       'exp.title': 'Experience',
       'exp.lead': 'Three seasons on a grounds crew, a Red Wings internship running point on 80+ event nights, and an honors-society seat in Eta Sigma Delta.',
@@ -127,18 +132,19 @@
       'res.act.club': 'Member — Niagara University Club Hockey',
       // contact
       'ct.title': "Let's talk.",
-      'ct.lead': 'Recruiting for a sports, hospitality, or event role? The fastest ways to reach me are below.',
+      'ct.lead': "Recruiting for a sports / hospitality / event role? I'd love to hear about it. Quickest ways to reach me are below — and yes, those email &amp; LinkedIn cards are interactive.",
       'ct.email.h': 'Email',
-      'ct.email.p': 'Best for recruiting and intro chats.',
+      'ct.email.p': 'Best for recruiting &amp; intro chats.',
+      'ct.email.back': 'Click to open your mail client →',
       'ct.li.h': 'LinkedIn',
       'ct.li.p': 'Full profile, recommendations, and reposts.',
+      'ct.li.back': 'Open in a new tab →',
       'ct.loc.h': 'Based in',
-      'ct.loc.note': 'Open to relocation for the right role.',
+      'ct.loc.p': 'Penfield, New York<br/><small>Open to relocation for the right role</small>',
       'ct.status.h': 'Status',
-      'ct.status.detail': 'Senior at Niagara University · Graduating 2026',
-      'ct.status.note': 'Open to full-time and summer opportunities.',
+      'ct.status.p': 'Senior at Niagara University · Graduating 2026<br/><small>Open to full-time &amp; summer opportunities</small>',
       'ct.form.h': 'Or drop a note',
-      'ct.form.muted': 'This form opens your default email client pre-filled.',
+      'ct.form.muted': 'This form opens your default email client pre-filled — no backend, no tracking.',
       'ct.form.name': 'Your name',
       'ct.form.email': 'Your email',
       'ct.form.subject': 'Subject',
@@ -149,13 +155,30 @@
       'err.h': 'Offside.',
       'err.p': "That page doesn't exist — let's get you back in the play.",
       'err.back': '← Back home',
+      // typed words (JSON array string)
+      'home.typed': '["Dominic","Dom","Dominic Andrade"]',
+      // palette items
+      'pal.home': 'Home',
+      'pal.experience': 'Experience',
+      'pal.resume': 'Resume',
+      'pal.resumePdf': 'Download resume PDF',
+      'pal.contact': 'Contact',
+      'pal.email': 'Email Dominic',
+      'pal.linkedin': 'LinkedIn',
+      'pal.theme': 'Toggle theme',
+      'pal.themeSub': 'light / dark',
+      'pal.lang': 'Toggle language',
+      'pal.langSub': 'English / Français',
     },
     fr: {
       'nav.home': 'Accueil',
       'nav.experience': 'Expérience',
       'nav.resume': 'CV',
       'nav.contact': 'Contact',
-      'footer.tag': 'Gestion du sport et des événements · Université Niagara',
+      'footer.tag': 'Conçu pour le jour du match.',
+      'footer.kbd': 'Essayez <kbd>⌘</kbd> <kbd>K</kbd> partout sur le site.',
+      'palette.placeholder': 'Aller à… (accueil, expérience, contact, email, linkedin)',
+      'palette.placeholderShort': 'Aller à…',
       'meta.home.title': 'Dominic Andrade — Gestion du sport et des événements',
       'meta.home.desc': 'Dominic Andrade — étudiant en dernière année à l\'Université Niagara en Gestion du sport et Gestion touristique des événements. Stagiaire en opérations de stade avec les Rochester Red Wings.',
       'meta.experience.title': 'Expérience — Dominic Andrade',
@@ -166,9 +189,10 @@
       'meta.contact.desc': 'Contactez Dominic Andrade — courriel et LinkedIn.',
       'meta.404.title': 'Hors-jeu — Dominic Andrade',
       'home.eyebrow': 'Penfield, NY · Promotion 2026',
-      'home.name': 'Dominic Andrade',
-      'home.role': 'Gestion du sport et des événements',
-      'home.sub': "Étudiant en dernière année à l'Université Niagara en Gestion du sport et Gestion touristique des événements. Stagiaire en opérations de stade avec les Rochester Red Wings à Innovative Field. Équipe d'entretien de terrain au Midvale Country Club. Membre d'Eta Sigma Delta, la société internationale d'honneur pour l'hospitalité et le tourisme.",
+      'home.hi': 'Bonjour, je suis ',
+      'home.build': 'Je crée des ',
+      'home.gde': 'expériences de jour de match',
+      'home.sub': "Étudiant en dernière année à l'Université Niagara en Gestion du sport et Gestion touristique des événements. Récemment dans les coulisses d'<strong>Innovative Field</strong> avec les Rochester Red Wings et sur le terrain du <strong>Midvale Country Club</strong> — toujours sur la glace en hockey universitaire.",
       'home.cta.exp': 'Voir mon expérience →',
       'home.cta.resume': 'Voir le CV',
       'home.cta.contact': 'Me contacter',
@@ -186,6 +210,7 @@
       'home.hl.title': 'Un coup de projecteur',
       'home.hl.body': "« Les étudiants en tourisme de l'Université Niagara ont rejoint les opérateurs réceptifs au <strong>Sommet IITA 2026</strong> pour découvrir le secteur de première main — un aperçu précieux des coulisses du tourisme réceptif. »",
       'home.hl.cite': '— International Inbound Travel Association',
+      'home.photo.cap': 'Hors du travail — toujours à la poursuite des lumières.',
       'exp.title': 'Expérience',
       'exp.lead': "Trois saisons dans une équipe d'entretien de terrain, un stage chez les Red Wings à piloter plus de 80 soirées d'événement, et un siège à la société d'honneur Eta Sigma Delta.",
       'exp.filter.all': 'Tous',
@@ -267,18 +292,19 @@
       'res.act': 'Activités',
       'res.act.club': 'Membre — Club de hockey de l\'Université Niagara',
       'ct.title': 'Discutons.',
-      'ct.lead': 'Vous recrutez pour un poste en sport, hospitalité ou événementiel ? Les moyens les plus rapides de me joindre sont ci-dessous.',
+      'ct.lead': "Vous recrutez pour un poste en sport / hospitalité / événementiel ? J'adorerais en savoir plus. Les meilleurs moyens de me joindre sont ci-dessous — et oui, les cartes courriel &amp; LinkedIn sont interactives.",
       'ct.email.h': 'Courriel',
-      'ct.email.p': 'Idéal pour le recrutement et les premiers contacts.',
+      'ct.email.p': 'Idéal pour le recrutement &amp; les premiers contacts.',
+      'ct.email.back': 'Cliquez pour ouvrir votre client courriel →',
       'ct.li.h': 'LinkedIn',
       'ct.li.p': 'Profil complet, recommandations et republications.',
+      'ct.li.back': 'Ouvrir dans un nouvel onglet →',
       'ct.loc.h': 'Basé à',
-      'ct.loc.note': 'Ouvert à la relocalisation pour le bon poste.',
+      'ct.loc.p': 'Penfield, New York<br/><small>Ouvert à la relocalisation pour le bon poste</small>',
       'ct.status.h': 'Statut',
-      'ct.status.detail': "Dernière année à l'Université Niagara · Diplôme 2026",
-      'ct.status.note': "Ouvert aux postes à temps plein et aux stages d'été.",
+      'ct.status.p': "Dernière année à l'Université Niagara · Diplôme 2026<br/><small>Ouvert aux postes à temps plein &amp; aux stages d'été</small>",
       'ct.form.h': 'Ou écrivez-moi',
-      'ct.form.muted': 'Ce formulaire ouvre votre client courriel par défaut pré-rempli.',
+      'ct.form.muted': 'Ce formulaire ouvre votre client courriel par défaut pré-rempli — aucun backend, aucun suivi.',
       'ct.form.name': 'Votre nom',
       'ct.form.email': 'Votre courriel',
       'ct.form.subject': 'Objet',
@@ -288,6 +314,18 @@
       'err.h': 'Hors-jeu.',
       'err.p': "Cette page n'existe pas — revenons dans le match.",
       'err.back': '← Retour à l\'accueil',
+      'home.typed': '["Dominic","Dom","Dominic Andrade"]',
+      'pal.home': 'Accueil',
+      'pal.experience': 'Expérience',
+      'pal.resume': 'CV',
+      'pal.resumePdf': 'Télécharger le CV (PDF)',
+      'pal.contact': 'Contact',
+      'pal.email': 'Écrire à Dominic',
+      'pal.linkedin': 'LinkedIn',
+      'pal.theme': 'Changer le thème',
+      'pal.themeSub': 'clair / sombre',
+      'pal.lang': 'Changer de langue',
+      'pal.langSub': 'English / Français',
     }
   };
 
@@ -355,17 +393,71 @@
   if (langBtn) {
     langBtn.addEventListener('click', () => {
       applyLang(currentLang === 'en' ? 'fr' : 'en');
+      // Re-render palette if open, and rebuild its items so labels match
+      buildPaletteItems();
     });
   }
 
   // Apply saved language on load
   applyLang(currentLang);
 
-  // Render stat numbers statically (no count-up animation)
-  d.querySelectorAll('.num[data-count]').forEach(el => {
-    const end = parseInt(el.dataset.count, 10);
-    el.textContent = el.dataset.raw === 'true' || end < 10000 ? String(end) : end.toLocaleString();
-  });
+  // Cursor glow
+  const glow = d.querySelector('.cursor-glow');
+  if (glow && matchMedia('(hover:hover)').matches) {
+    let tx = -9999, ty = -9999, cx = tx, cy = ty;
+    window.addEventListener('pointermove', (e) => { tx = e.clientX; ty = e.clientY; });
+    (function raf(){
+      cx += (tx - cx) * 0.15; cy += (ty - cy) * 0.15;
+      glow.style.left = cx + 'px'; glow.style.top = cy + 'px';
+      requestAnimationFrame(raf);
+    })();
+  }
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  d.querySelectorAll('.reveal, .skills').forEach(el => io.observe(el));
+
+  // Count-up stats
+  const nums = d.querySelectorAll('.num[data-count]');
+  const numIO = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target;
+      const end = parseInt(el.dataset.count, 10);
+      const dur = 1200;
+      const start = performance.now();
+      const tick = (t) => {
+        const p = Math.min(1, (t - start) / dur);
+        const v = Math.floor(end * (1 - Math.pow(1 - p, 3)));
+        el.textContent = el.dataset.raw === 'true' || end < 10000 ? String(v) : v.toLocaleString();
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+      numIO.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  nums.forEach(n => numIO.observe(n));
+
+  // Typed name
+  const typed = d.getElementById('typed-name');
+  if (typed) {
+    let words;
+    try { words = JSON.parse(t('home.typed')); } catch(_) { words = ['Dominic','Dom','Dominic Andrade']; }
+    let wi = 0, ci = 0, dir = 1, pause = 0;
+    typed.textContent = '';
+    const step = () => {
+      if (pause > 0) { pause--; return setTimeout(step, 40); }
+      const w = words[wi];
+      ci += dir;
+      typed.textContent = w.slice(0, ci);
+      if (ci === w.length) { dir = -1; pause = 40; }
+      else if (ci === 0 && dir === -1) { dir = 1; wi = (wi + 1) % words.length; pause = 10; }
+      setTimeout(step, dir === 1 ? 90 : 45);
+    };
+    step();
+  }
 
   // Experience filter
   d.querySelectorAll('.chip').forEach(chip => {
@@ -390,4 +482,56 @@
       window.location.href = `mailto:domhg30@gmail.com?subject=${encodeURIComponent(data.get('subject'))}&body=${encodeURIComponent(body)}`;
     });
   }
+
+  // Command palette
+  const palette = d.getElementById('palette');
+  const pInput = d.getElementById('palette-input');
+  const pList = d.getElementById('palette-list');
+  let items = [];
+  function buildPaletteItems() {
+    items = [
+      { label: t('pal.home'), sub: 'index.html', href: './index.html' },
+      { label: t('pal.experience'), sub: 'experience.html', href: './experience.html' },
+      { label: t('pal.resume'), sub: 'resume.html', href: './resume.html' },
+      { label: t('pal.resumePdf'), sub: 'assets/Dominic-Andrade-Resume.pdf', href: 'assets/Dominic-Andrade-Resume.pdf' },
+      { label: t('pal.contact'), sub: 'contact.html', href: './contact.html' },
+      { label: t('pal.email'), sub: 'domhg30@gmail.com', href: 'mailto:domhg30@gmail.com' },
+      { label: t('pal.linkedin'), sub: '/in/dominic-andrade', href: 'https://www.linkedin.com/in/dominic-andrade-235722251' },
+      { label: t('pal.theme'), sub: t('pal.themeSub'), action: () => toggle && toggle.click() },
+      { label: t('pal.lang'), sub: t('pal.langSub'), action: () => langBtn && langBtn.click() },
+    ];
+  }
+  buildPaletteItems();
+  let sel = 0;
+  const render = (q = '') => {
+    const ql = q.toLowerCase();
+    const filtered = items.filter(i => i.label.toLowerCase().includes(ql) || (i.sub||'').toLowerCase().includes(ql));
+    pList.innerHTML = filtered.map((i, idx) =>
+      `<li data-idx="${idx}" class="${idx===sel?'sel':''}"><span>${i.label}</span><small>${i.sub||''}</small></li>`
+    ).join('');
+    pList._filtered = filtered;
+  };
+  const open = () => { if(!palette) return; palette.hidden = false; pInput.value=''; sel=0; render(); pInput.focus(); };
+  const close = () => { if(palette) palette.hidden = true; };
+  const run = (i) => {
+    close();
+    if (!i) return;
+    if (i.action) i.action();
+    else if (i.href) window.location.href = i.href;
+  };
+
+  window.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && (e.key === 'k' || e.key === 'K')) { e.preventDefault(); palette && palette.hidden ? open() : close(); }
+    else if (e.key === 'Escape') close();
+    else if (!palette || palette.hidden) return;
+    else if (e.key === 'ArrowDown') { e.preventDefault(); sel = Math.min((pList._filtered||[]).length-1, sel+1); render(pInput.value); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); sel = Math.max(0, sel-1); render(pInput.value); }
+    else if (e.key === 'Enter') { e.preventDefault(); run((pList._filtered||[])[sel]); }
+  });
+  if (pInput) pInput.addEventListener('input', () => { sel = 0; render(pInput.value); });
+  if (pList) pList.addEventListener('click', (e) => {
+    const li = e.target.closest('li'); if (!li) return;
+    run((pList._filtered||[])[parseInt(li.dataset.idx,10)]);
+  });
+  if (palette) palette.addEventListener('click', (e) => { if (e.target === palette) close(); });
 })();
