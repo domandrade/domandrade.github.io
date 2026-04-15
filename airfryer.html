@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Fryer Room — Dominic Andrade</title>
+  <meta name="description" content="Dom's air fryer scoreboard — temps, times, and ratings for the dishes on heavy rotation." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%235b2a86'/%3E%3Ctext x='50' y='66' font-family='Georgia' font-size='52' text-anchor='middle' fill='%23f5c451' font-weight='700'%3ED%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body data-page="airfryer">
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="./index.html"><span class="brand-mark">DA</span><span class="brand-name">Dominic Andrade</span></a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="./index.html" class="nav-link" data-i18n="nav.home">Home</a>
+      <a href="./experience.html" class="nav-link" data-i18n="nav.experience">Experience</a>
+      <a href="./resume.html" class="nav-link" data-i18n="nav.resume">Resume</a>
+      <a href="./airfryer.html" class="nav-link active" data-i18n="nav.fryer">Fryer</a>
+      <a href="./contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <button id="lang-toggle" class="theme-toggle lang-toggle" aria-label="Toggle language" title="EN / FR">
+      <span class="lang-label">EN</span>
+    </button>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">
+      <span class="sun">☀</span><span class="moon">☾</span>
+    </button>
+  </header>
+
+  <main class="container">
+    <section class="page-head fryer-head">
+      <div class="fryer-badge" aria-hidden="true">♨</div>
+      <h1 data-i18n="fryer.title">The Fryer Room</h1>
+      <p class="lead" data-i18n="fryer.lead">Crisp is a strategy. Below is the live scoreboard — every dish on heavy rotation in my apartment, with the temps, times, and ratings I actually use. No fluff, no ads, no scroll-past life stories.</p>
+    </section>
+
+    <section class="fryer-stats reveal">
+      <div class="fs-card">
+        <div class="fs-num" data-count="247">0</div>
+        <div class="fs-lbl" data-i18n="fryer.stat.cooks">cooks logged this year</div>
+      </div>
+      <div class="fs-card">
+        <div class="fs-num"><span data-count="18">0</span>h</div>
+        <div class="fs-lbl" data-i18n="fryer.stat.hours">saved vs. oven preheats</div>
+      </div>
+      <div class="fs-card">
+        <div class="fs-num"><span id="avg-rating">0.0</span>/10</div>
+        <div class="fs-lbl" data-i18n="fryer.stat.rating">average roster rating</div>
+      </div>
+      <div class="fs-card">
+        <div class="fs-num">400°F</div>
+        <div class="fs-lbl" data-i18n="fryer.stat.fav">most-used temp</div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2 class="section-title" data-i18n="fryer.hof.title">🏆 Hall of Fame</h2>
+      <div class="hof-grid" id="hof-grid"></div>
+    </section>
+
+    <section class="fryer-controls reveal">
+      <div class="filter-row" role="tablist" aria-label="Filter by category">
+        <button class="chip active" data-fryer-filter="all" data-i18n="fryer.filter.all">All</button>
+        <button class="chip" data-fryer-filter="proteins" data-i18n="fryer.filter.proteins">Proteins</button>
+        <button class="chip" data-fryer-filter="veggies" data-i18n="fryer.filter.veggies">Veggies</button>
+        <button class="chip" data-fryer-filter="frozen" data-i18n="fryer.filter.frozen">Frozen</button>
+        <button class="chip" data-fryer-filter="snacks" data-i18n="fryer.filter.snacks">Snacks</button>
+      </div>
+      <div class="sort-wrap">
+        <label class="sort-label" for="fryer-sort" data-i18n="fryer.sort">Sort by</label>
+        <select id="fryer-sort" class="sort-select">
+          <option value="rating" data-i18n="fryer.sort.rating">Rating ↓</option>
+          <option value="time" data-i18n="fryer.sort.time">Cook time ↑</option>
+          <option value="temp" data-i18n="fryer.sort.temp">Temperature ↑</option>
+          <option value="name" data-i18n="fryer.sort.name">A → Z</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="dish-grid" id="dish-grid"></section>
+
+    <section class="hot-take reveal">
+      <blockquote class="pull-quote">
+        <p data-i18n="fryer.quote" data-i18n-html>"The oven is a stadium — capacity when you need it. The air fryer is the <strong>home locker room</strong>: faster turns, better edges, and a crowd of one that always leaves happy."</p>
+        <cite>— Dom, probably mid-bite</cite>
+      </blockquote>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Dominic Andrade · <span data-i18n="footer.tag">Built for game day.</span></p>
+  </footer>
+
+  <div id="palette" class="palette" hidden>
+    <div class="palette-inner" role="dialog" aria-label="Command palette">
+      <input id="palette-input" type="text" placeholder="Jump to…" data-i18n-attr="placeholder:palette.placeholderShort" autocomplete="off" />
+      <ul id="palette-list"></ul>
+    </div>
+  </div>
+
+  <script>
+    // ===== Fryer Room data =====
+    window.FRYER_DISHES = [
+      { id:'wings',  emoji:'🍗', name:'Chicken Wings',  temp:400, time:22, rating:9.8, cat:'proteins', note:'The whole point of owning an air fryer.', noteFr:"Toute la raison d'avoir une friteuse à air." },
+      { id:'bacon',  emoji:'🥓', name:'Bacon',          temp:375, time:9,  rating:9.5, cat:'proteins', note:'Zero splatter. Maximum crunch.', noteFr:'Zéro éclaboussure. Croquant maximal.' },
+      { id:'fries',  emoji:'🍟', name:'Frozen Fries',   temp:400, time:12, rating:9.2, cat:'frozen',   note:'Drive-thru quality in your kitchen.', noteFr:'Qualité comptoir-auto dans votre cuisine.' },
+      { id:'salmon', emoji:'🐟', name:'Salmon Fillet',  temp:380, time:10, rating:9.0, cat:'proteins', note:'Crispy skin, flaky inside. Date-night unlock.', noteFr:'Peau croustillante, chair feuilletée. Atout soirée.' },
+      { id:'mozz',   emoji:'🧀', name:'Mozzarella Sticks', temp:390, time:6, rating:8.8, cat:'frozen', note:'Appetizer MVP. Do not overcook.', noteFr:"MVP des entrées. Ne pas trop cuire." },
+      { id:'sprouts',emoji:'🥬', name:'Brussels Sprouts', temp:390, time:14, rating:8.7, cat:'veggies', note:'The sprout-convert starter pack.', noteFr:'Le pack de conversion aux choux de Bruxelles.' },
+      { id:'tenders',emoji:'🍗', name:'Chicken Tenders',temp:400, time:14, rating:8.6, cat:'proteins', note:'Panko + mayo brush = zero regrets.', noteFr:'Panko + badigeon de mayo = aucun regret.' },
+      { id:'pizza',  emoji:'🍕', name:'Leftover Pizza', temp:350, time:4,  rating:8.5, cat:'snacks',   note:'Microwave pizza is a war crime.', noteFr:'La pizza au micro-ondes est un crime.' },
+      { id:'bagel',  emoji:'🥯', name:'Bagel Bites',    temp:380, time:7,  rating:8.2, cat:'frozen',   note:'Dorm-era comfort. Still undefeated.', noteFr:"Réconfort d'époque étudiante. Toujours invaincu." },
+      { id:'steak',  emoji:'🥩', name:'NY Strip Steak', temp:400, time:12, rating:8.1, cat:'proteins', note:'Finish in a pan. Rest 5. Trust.', noteFr:'Finir en poêle. Reposer 5 min. Fais confiance.' },
+      { id:'pot',    emoji:'🥟', name:'Potstickers',    temp:375, time:10, rating:8.0, cat:'frozen',   note:'Crispy bottom without the oil mess.', noteFr:'Fond croustillant sans le désordre d\'huile.' },
+      { id:'brocc',  emoji:'🥦', name:'Roasted Broccoli',temp:380, time:9, rating:7.8, cat:'veggies',  note:'Parm + lemon. Not optional.', noteFr:'Parmesan + citron. Non négociable.' },
+    ];
+  </script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

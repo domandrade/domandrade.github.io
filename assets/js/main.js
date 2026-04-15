@@ -9,7 +9,36 @@
       'nav.home': 'Home',
       'nav.experience': 'Experience',
       'nav.resume': 'Resume',
+      'nav.fryer': 'Fryer',
       'nav.contact': 'Contact',
+      // fryer page
+      'meta.airfryer.title': 'The Fryer Room — Dominic Andrade',
+      'meta.airfryer.desc': "Dom's air fryer scoreboard — temps, times, and ratings for the dishes on heavy rotation.",
+      'fryer.title': 'The Fryer Room',
+      'fryer.lead': 'Crisp is a strategy. Below is the live scoreboard — every dish on heavy rotation in my apartment, with the temps, times, and ratings I actually use. No fluff, no ads, no scroll-past life stories.',
+      'fryer.stat.cooks': 'cooks logged this year',
+      'fryer.stat.hours': 'saved vs. oven preheats',
+      'fryer.stat.rating': 'average roster rating',
+      'fryer.stat.fav': 'most-used temp',
+      'fryer.hof.title': '🏆 Hall of Fame',
+      'fryer.filter.all': 'All',
+      'fryer.filter.proteins': 'Proteins',
+      'fryer.filter.veggies': 'Veggies',
+      'fryer.filter.frozen': 'Frozen',
+      'fryer.filter.snacks': 'Snacks',
+      'fryer.sort': 'Sort by',
+      'fryer.sort.rating': 'Rating ↓',
+      'fryer.sort.time': 'Cook time ↑',
+      'fryer.sort.temp': 'Temperature ↑',
+      'fryer.sort.name': 'A → Z',
+      'fryer.quote': '"The oven is a stadium — capacity when you need it. The air fryer is the <strong>home locker room</strong>: faster turns, better edges, and a crowd of one that always leaves happy."',
+      'fryer.card.temp': 'Temp',
+      'fryer.card.time': 'Time',
+      'fryer.card.rating': 'Dom Rating',
+      'fryer.card.mins': 'min',
+      'fryer.hof.gold': '🥇 Gold',
+      'fryer.hof.silver': '🥈 Silver',
+      'fryer.hof.bronze': '🥉 Bronze',
       'footer.tag': 'Built for game day.',
       'footer.kbd': 'Try <kbd>⌘</kbd> <kbd>K</kbd> anywhere on the site.',
       'palette.placeholder': 'Jump to… (home, experience, contact, rink, arcade, email, linkedin)',
@@ -174,7 +203,35 @@
       'nav.home': 'Accueil',
       'nav.experience': 'Expérience',
       'nav.resume': 'CV',
+      'nav.fryer': 'Friteuse',
       'nav.contact': 'Contact',
+      'meta.airfryer.title': 'La salle de la friteuse — Dominic Andrade',
+      'meta.airfryer.desc': "Le tableau de bord de la friteuse à air de Dom — températures, temps et notes des plats en rotation.",
+      'fryer.title': 'La salle de la friteuse',
+      'fryer.lead': "Le croustillant est une stratégie. Voici le tableau de bord en direct — chaque plat en rotation dans mon appartement, avec les températures, les temps et les notes que j'utilise vraiment. Pas de remplissage, pas de pubs, pas d'histoires de vie.",
+      'fryer.stat.cooks': 'cuissons enregistrées cette année',
+      'fryer.stat.hours': 'épargnées vs. préchauffages au four',
+      'fryer.stat.rating': 'note moyenne de la liste',
+      'fryer.stat.fav': 'température la plus utilisée',
+      'fryer.hof.title': '🏆 Temple de la renommée',
+      'fryer.filter.all': 'Tous',
+      'fryer.filter.proteins': 'Protéines',
+      'fryer.filter.veggies': 'Légumes',
+      'fryer.filter.frozen': 'Congelés',
+      'fryer.filter.snacks': 'Collations',
+      'fryer.sort': 'Trier par',
+      'fryer.sort.rating': 'Note ↓',
+      'fryer.sort.time': 'Temps de cuisson ↑',
+      'fryer.sort.temp': 'Température ↑',
+      'fryer.sort.name': 'A → Z',
+      'fryer.quote': '« Le four est un stade — de la capacité quand il en faut. La friteuse à air, c\'est le <strong>vestiaire à la maison</strong> : des tours plus rapides, de meilleurs contours, et une foule d\'une seule personne qui repart toujours heureuse. »',
+      'fryer.card.temp': 'Temp.',
+      'fryer.card.time': 'Temps',
+      'fryer.card.rating': 'Note de Dom',
+      'fryer.card.mins': 'min',
+      'fryer.hof.gold': '🥇 Or',
+      'fryer.hof.silver': '🥈 Argent',
+      'fryer.hof.bronze': '🥉 Bronze',
       'footer.tag': 'Conçu pour le jour du match.',
       'footer.kbd': 'Essayez <kbd>⌘</kbd> <kbd>K</kbd> partout sur le site.',
       'palette.placeholder': 'Aller à… (accueil, expérience, contact, email, linkedin)',
@@ -494,6 +551,7 @@
       { label: t('pal.experience'), sub: 'experience.html', href: './experience.html' },
       { label: t('pal.resume'), sub: 'resume.html', href: './resume.html' },
       { label: t('pal.resumePdf'), sub: 'assets/Dominic-Andrade-Resume.pdf', href: 'assets/Dominic-Andrade-Resume.pdf' },
+      { label: t('nav.fryer'), sub: 'airfryer.html', href: './airfryer.html' },
       { label: t('pal.contact'), sub: 'contact.html', href: './contact.html' },
       { label: t('pal.email'), sub: 'domhg30@gmail.com', href: 'mailto:domhg30@gmail.com' },
       { label: t('pal.linkedin'), sub: '/in/dominic-andrade', href: 'https://www.linkedin.com/in/dominic-andrade-235722251' },
@@ -534,4 +592,88 @@
     run((pList._filtered||[])[parseInt(li.dataset.idx,10)]);
   });
   if (palette) palette.addEventListener('click', (e) => { if (e.target === palette) close(); });
+
+  // ===== Fryer Room =====
+  const dishGrid = d.getElementById('dish-grid');
+  const hofGrid = d.getElementById('hof-grid');
+  const sortSel = d.getElementById('fryer-sort');
+  const avgEl = d.getElementById('avg-rating');
+  const dishes = window.FRYER_DISHES;
+
+  if (dishGrid && dishes) {
+    let activeCat = 'all';
+    let activeSort = 'rating';
+
+    const starBar = (r) => {
+      const pct = Math.max(0, Math.min(100, (r / 10) * 100));
+      return `<div class="rating-bar" aria-label="${r} out of 10"><i style="width:${pct}%"></i></div>`;
+    };
+
+    const dishCard = (dish) => {
+      const note = currentLang === 'fr' ? (dish.noteFr || dish.note) : dish.note;
+      return `
+        <article class="dish-card" data-cat="${dish.cat}">
+          <div class="dish-top">
+            <span class="dish-emoji" aria-hidden="true">${dish.emoji}</span>
+            <span class="dish-rating">${dish.rating.toFixed(1)}</span>
+          </div>
+          <h3 class="dish-name">${dish.name}</h3>
+          <p class="dish-note">${note}</p>
+          <dl class="dish-stats">
+            <div><dt>${t('fryer.card.temp')}</dt><dd>${dish.temp}°F</dd></div>
+            <div><dt>${t('fryer.card.time')}</dt><dd>${dish.time} ${t('fryer.card.mins')}</dd></div>
+            <div class="bar-cell"><dt>${t('fryer.card.rating')}</dt><dd>${starBar(dish.rating)}</dd></div>
+          </dl>
+        </article>
+      `;
+    };
+
+    const sortFns = {
+      rating: (a,b) => b.rating - a.rating,
+      time:   (a,b) => a.time - b.time,
+      temp:   (a,b) => a.temp - b.temp,
+      name:   (a,b) => a.name.localeCompare(b.name),
+    };
+
+    const renderDishes = () => {
+      const list = dishes
+        .filter(x => activeCat === 'all' || x.cat === activeCat)
+        .sort(sortFns[activeSort] || sortFns.rating);
+      dishGrid.innerHTML = list.map(dishCard).join('');
+    };
+
+    const renderHof = () => {
+      const top3 = [...dishes].sort(sortFns.rating).slice(0, 3);
+      const medals = [t('fryer.hof.gold'), t('fryer.hof.silver'), t('fryer.hof.bronze')];
+      hofGrid.innerHTML = top3.map((dish, i) => `
+        <div class="hof-card hof-${i+1}">
+          <div class="hof-medal">${medals[i]}</div>
+          <div class="hof-emoji">${dish.emoji}</div>
+          <div class="hof-name">${dish.name}</div>
+          <div class="hof-score">${dish.rating.toFixed(1)}/10</div>
+        </div>
+      `).join('');
+    };
+
+    if (avgEl) {
+      const avg = dishes.reduce((s,x) => s + x.rating, 0) / dishes.length;
+      avgEl.textContent = avg.toFixed(1);
+    }
+
+    d.querySelectorAll('[data-fryer-filter]').forEach(chip => {
+      chip.addEventListener('click', () => {
+        d.querySelectorAll('[data-fryer-filter]').forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        activeCat = chip.dataset.fryerFilter;
+        renderDishes();
+      });
+    });
+    if (sortSel) sortSel.addEventListener('change', () => { activeSort = sortSel.value; renderDishes(); });
+
+    // Re-render on language change so notes + card labels swap
+    if (langBtn) langBtn.addEventListener('click', () => { renderDishes(); renderHof(); });
+
+    renderDishes();
+    renderHof();
+  }
 })();
