@@ -9,8 +9,6 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body data-page="contact">
-  <div class="cursor-glow" aria-hidden="true"></div>
-
   <header class="site-header">
     <a class="brand" href="./index.html"><span class="brand-mark">DA</span><span class="brand-name">Dominic Andrade</span></a>
     <nav class="site-nav" aria-label="Primary">
@@ -30,54 +28,38 @@
   <main class="container narrow">
     <section class="page-head">
       <h1 data-i18n="ct.title">Let's talk.</h1>
-      <p class="lead" data-i18n="ct.lead" data-i18n-html>Recruiting for a sports / hospitality / event role? I'd love to hear about it. Quickest ways to reach me are below — and yes, those email &amp; LinkedIn cards are interactive.</p>
+      <p class="lead" data-i18n="ct.lead">Recruiting for a sports, hospitality, or event role? The fastest ways to reach me are below.</p>
     </section>
 
     <section class="contact-grid">
-      <a class="contact-card flip" href="mailto:domhg30@gmail.com" aria-label="Email Dominic">
-        <div class="flip-inner">
-          <div class="flip-front">
-            <div class="contact-ico">✉️</div>
-            <h3 data-i18n="ct.email.h">Email</h3>
-            <p data-i18n="ct.email.p" data-i18n-html>Best for recruiting &amp; intro chats.</p>
-          </div>
-          <div class="flip-back">
-            <h3>domhg30@gmail.com</h3>
-            <p data-i18n="ct.email.back">Click to open your mail client →</p>
-          </div>
-        </div>
+      <a class="contact-card" href="mailto:domhg30@gmail.com">
+        <h3 data-i18n="ct.email.h">Email</h3>
+        <p class="contact-detail">domhg30@gmail.com</p>
+        <p class="contact-note" data-i18n="ct.email.p">Best for recruiting and intro chats.</p>
       </a>
 
-      <a class="contact-card flip" href="https://www.linkedin.com/in/dominic-andrade-235722251" target="_blank" rel="noopener" aria-label="LinkedIn profile">
-        <div class="flip-inner">
-          <div class="flip-front">
-            <div class="contact-ico">in</div>
-            <h3 data-i18n="ct.li.h">LinkedIn</h3>
-            <p data-i18n="ct.li.p">Full profile, recommendations, and reposts.</p>
-          </div>
-          <div class="flip-back">
-            <h3>/in/dominic-andrade</h3>
-            <p data-i18n="ct.li.back">Open in a new tab →</p>
-          </div>
-        </div>
+      <a class="contact-card" href="https://www.linkedin.com/in/dominic-andrade-235722251" target="_blank" rel="noopener">
+        <h3 data-i18n="ct.li.h">LinkedIn</h3>
+        <p class="contact-detail">/in/dominic-andrade</p>
+        <p class="contact-note" data-i18n="ct.li.p">Full profile, recommendations, and reposts.</p>
       </a>
 
       <div class="contact-card static">
-        <div class="contact-ico">📍</div>
         <h3 data-i18n="ct.loc.h">Based in</h3>
-        <p data-i18n="ct.loc.p" data-i18n-html>Penfield, New York<br/><small>Open to relocation for the right role</small></p>
+        <p class="contact-detail">Penfield, New York</p>
+        <p class="contact-note" data-i18n="ct.loc.note">Open to relocation for the right role.</p>
       </div>
 
       <div class="contact-card static">
-        <div class="contact-ico">🎓</div>
         <h3 data-i18n="ct.status.h">Status</h3>
-        <p data-i18n="ct.status.p" data-i18n-html>Senior at Niagara University · Graduating 2026<br/><small>Open to full-time &amp; summer opportunities</small></p>
+        <p class="contact-detail" data-i18n="ct.status.detail">Senior at Niagara University · Graduating 2026</p>
+        <p class="contact-note" data-i18n="ct.status.note">Open to full-time and summer opportunities.</p>
       </div>
     </section>
 
-    <section class="form-wrap reveal">
+    <section class="form-wrap">
       <h2 data-i18n="ct.form.h">Or drop a note</h2>
-      <p class="muted" data-i18n="ct.form.muted">This form opens your default email client pre-filled — no backend, no tracking.</p>
+      <p class="muted" data-i18n="ct.form.muted">This form opens your default email client pre-filled.</p>
       <form id="contact-form" class="contact-form">
         <label><span data-i18n="ct.form.name">Your name</span>
           <input type="text" name="name" required />
@@ -97,15 +79,8 @@
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> Dominic Andrade · <span data-i18n="footer.tag">Built for game day.</span></p>
+    <p>© <span id="year"></span> Dominic Andrade · <span data-i18n="footer.tag">Sport &amp; Event Management · Niagara University</span></p>
   </footer>
-
-  <div id="palette" class="palette" hidden>
-    <div class="palette-inner" role="dialog" aria-label="Command palette">
-      <input id="palette-input" type="text" placeholder="Jump to…" data-i18n-attr="placeholder:palette.placeholderShort" autocomplete="off" />
-      <ul id="palette-list"></ul>
-    </div>
-  </div>
 
   <script src="assets/js/main.js" defer></script>
 </body>
