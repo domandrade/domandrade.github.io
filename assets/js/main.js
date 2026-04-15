@@ -47,6 +47,7 @@
       'home.hl.title': 'A quick highlight',
       'home.hl.body': '"Tourism students from Niagara University joined inbound operators at <strong>IITA Summit 2026</strong> to experience the sector firsthand — a valuable behind-the-scenes look at how inbound business is built."',
       'home.hl.cite': '— International Inbound Travel Association',
+      'home.photo.cap': 'Off the clock — still chasing the lights.',
       // experience
       'exp.title': 'Experience',
       'exp.lead': 'Three seasons on a grounds crew, a Red Wings internship running point on 80+ event nights, and an honors-society seat in Eta Sigma Delta.',
@@ -209,6 +210,7 @@
       'home.hl.title': 'Un coup de projecteur',
       'home.hl.body': "« Les étudiants en tourisme de l'Université Niagara ont rejoint les opérateurs réceptifs au <strong>Sommet IITA 2026</strong> pour découvrir le secteur de première main — un aperçu précieux des coulisses du tourisme réceptif. »",
       'home.hl.cite': '— International Inbound Travel Association',
+      'home.photo.cap': 'Hors du travail — toujours à la poursuite des lumières.',
       'exp.title': 'Expérience',
       'exp.lead': "Trois saisons dans une équipe d'entretien de terrain, un stage chez les Red Wings à piloter plus de 80 soirées d'événement, et un siège à la société d'honneur Eta Sigma Delta.",
       'exp.filter.all': 'Tous',
