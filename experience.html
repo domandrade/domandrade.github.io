@@ -14,11 +14,14 @@
   <header class="site-header">
     <a class="brand" href="./index.html"><span class="brand-mark">DA</span><span class="brand-name">Dominic Andrade</span></a>
     <nav class="site-nav" aria-label="Primary">
-      <a href="./index.html" class="nav-link">Home</a>
-      <a href="./experience.html" class="nav-link active">Experience</a>
-      <a href="./resume.html" class="nav-link">Resume</a>
-      <a href="./contact.html" class="nav-link">Contact</a>
+      <a href="./index.html" class="nav-link" data-i18n="nav.home">Home</a>
+      <a href="./experience.html" class="nav-link active" data-i18n="nav.experience">Experience</a>
+      <a href="./resume.html" class="nav-link" data-i18n="nav.resume">Resume</a>
+      <a href="./contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
     </nav>
+    <button id="lang-toggle" class="theme-toggle lang-toggle" aria-label="Toggle language" title="EN / FR">
+      <span class="lang-label">EN</span>
+    </button>
     <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">
       <span class="sun">☀</span><span class="moon">☾</span>
     </button>
@@ -26,13 +29,13 @@
 
   <main class="container">
     <section class="page-head">
-      <h1>Experience</h1>
-      <p class="lead">Three seasons on a grounds crew, a Red Wings internship running point on 80+ event nights, and an honors-society seat in Eta Sigma Delta.</p>
+      <h1 data-i18n="exp.title">Experience</h1>
+      <p class="lead" data-i18n="exp.lead">Three seasons on a grounds crew, a Red Wings internship running point on 80+ event nights, and an honors-society seat in Eta Sigma Delta.</p>
       <div class="filter-row" role="tablist" aria-label="Filter experience">
-        <button class="chip active" data-filter="all" role="tab" aria-selected="true">All</button>
-        <button class="chip" data-filter="sports" role="tab" aria-selected="false">Sports</button>
-        <button class="chip" data-filter="hospitality" role="tab" aria-selected="false">Hospitality</button>
-        <button class="chip" data-filter="ops" role="tab" aria-selected="false">Operations</button>
+        <button class="chip active" data-filter="all" role="tab" aria-selected="true" data-i18n="exp.filter.all">All</button>
+        <button class="chip" data-filter="sports" role="tab" aria-selected="false" data-i18n="exp.filter.sports">Sports</button>
+        <button class="chip" data-filter="hospitality" role="tab" aria-selected="false" data-i18n="exp.filter.hospitality">Hospitality</button>
+        <button class="chip" data-filter="ops" role="tab" aria-selected="false" data-i18n="exp.filter.ops">Operations</button>
       </div>
     </section>
 
@@ -41,14 +44,14 @@
         <div class="tl-dot"></div>
         <div class="tl-card">
           <header>
-            <h3>Ballpark Operations Intern</h3>
-            <span class="tl-org">Rochester Red Wings · Innovative Field</span>
-            <span class="tl-date">Mar 2025 – Aug 2025</span>
+            <h3 data-i18n="exp.rw.role">Ballpark Operations Intern</h3>
+            <span class="tl-org" data-i18n="exp.rw.org">Rochester Red Wings · Innovative Field</span>
+            <span class="tl-date" data-i18n="exp.rw.date">Mar 2025 – Aug 2025</span>
           </header>
-          <p>Hands-on role inside a multi-use stadium — not just Red Wings home games, but weddings, fundraisers, festivals, and concerts. Responsible for event prep, facility turnover, and keeping the ballpark up to standard for every audience that walked through the gates.</p>
+          <p data-i18n="exp.rw.body">Hands-on role inside a multi-use stadium — not just Red Wings home games, but weddings, fundraisers, festivals, and concerts. Responsible for event prep, facility turnover, and keeping the ballpark up to standard for every audience that walked through the gates.</p>
           <ul class="tags">
-            <li>Event Management</li><li>Problem Solving</li><li>Customer Service</li>
-            <li>Time Management</li><li>Communication</li>
+            <li data-i18n="tag.eventmgmt">Event Management</li><li data-i18n="tag.problem">Problem Solving</li><li data-i18n="tag.cs">Customer Service</li>
+            <li data-i18n="tag.time">Time Management</li><li data-i18n="tag.comm">Communication</li>
           </ul>
         </div>
       </article>
@@ -57,12 +60,12 @@
         <div class="tl-dot"></div>
         <div class="tl-card">
           <header>
-            <h3>Grounds Crew</h3>
-            <span class="tl-org">Midvale Country Club · Seasonal</span>
-            <span class="tl-date">Apr 2023 – Present · 3 yrs</span>
+            <h3 data-i18n="exp.mv.role">Grounds Crew</h3>
+            <span class="tl-org" data-i18n="exp.mv.org">Midvale Country Club · Seasonal</span>
+            <span class="tl-date" data-i18n="exp.mv.date">Apr 2023 – Present · 3 yrs</span>
           </header>
-          <p>Dawn-patrol crew keeping a private club's grounds tournament-ready through three seasons. Early hours, detail work, and the kind of consistency members notice before they can name why.</p>
-          <ul class="tags"><li>Attention to Detail</li><li>Reliability</li><li>Seasonal Operations</li></ul>
+          <p data-i18n="exp.mv.body">Dawn-patrol crew keeping a private club's grounds tournament-ready through three seasons. Early hours, detail work, and the kind of consistency members notice before they can name why.</p>
+          <ul class="tags"><li data-i18n="tag.detail">Attention to Detail</li><li data-i18n="tag.reliable">Reliability</li><li data-i18n="tag.seasonal">Seasonal Operations</li></ul>
         </div>
       </article>
 
@@ -70,11 +73,11 @@
         <div class="tl-dot"></div>
         <div class="tl-card">
           <header>
-            <h3>Maintenance</h3>
-            <span class="tl-org">Eastview Mall · Part-time</span>
-            <span class="tl-date">Dec 2024 – Jan 2025</span>
+            <h3 data-i18n="exp.ev.role">Maintenance</h3>
+            <span class="tl-org" data-i18n="exp.ev.org">Eastview Mall · Part-time</span>
+            <span class="tl-date" data-i18n="exp.ev.date">Dec 2024 – Jan 2025</span>
           </header>
-          <p>Holiday-season maintenance at one of upstate New York's busiest retail destinations.</p>
+          <p data-i18n="exp.ev.body">Holiday-season maintenance at one of upstate New York's busiest retail destinations.</p>
         </div>
       </article>
 
@@ -82,67 +85,67 @@
         <div class="tl-dot"></div>
         <div class="tl-card">
           <header>
-            <h3>Evening Dining Staff</h3>
-            <span class="tl-org">Elderwood Assisted Living at Penfield</span>
-            <span class="tl-date">Jun 2022 – Jun 2023</span>
+            <h3 data-i18n="exp.el.role">Evening Dining Staff</h3>
+            <span class="tl-org" data-i18n="exp.el.org">Elderwood Assisted Living at Penfield</span>
+            <span class="tl-date" data-i18n="exp.el.date">Jun 2022 – Jun 2023</span>
           </header>
-          <p>Dining service for residents — the job that taught me hospitality is equal parts logistics and empathy.</p>
-          <ul class="tags"><li>Food Safety</li><li>Hospitality</li><li>Customer Service</li></ul>
+          <p data-i18n="exp.el.body">Dining service for residents — the job that taught me hospitality is equal parts logistics and empathy.</p>
+          <ul class="tags"><li data-i18n="tag.food">Food Safety</li><li data-i18n="tag.hosp">Hospitality</li><li data-i18n="tag.cs">Customer Service</li></ul>
         </div>
       </article>
     </section>
 
     <section class="split">
       <div class="split-col reveal">
-        <h2>Education</h2>
+        <h2 data-i18n="exp.edu.title">Education</h2>
         <div class="edu-card">
           <h3>Niagara University</h3>
-          <p class="edu-deg">B.S. Sport Management &amp; Tourism Event Management · 2022 – 2026</p>
+          <p class="edu-deg" data-i18n="exp.edu.nu.deg">B.S. Sport Management &amp; Tourism Event Management · 2022 – 2026</p>
           <ul>
-            <li>Club Hockey</li>
-            <li><strong>Eta Sigma Delta</strong> — International Honor Society for Hospitality &amp; Tourism</li>
+            <li data-i18n="exp.edu.nu.club">Club Hockey</li>
+            <li data-i18n="exp.edu.nu.esd" data-i18n-html><strong>Eta Sigma Delta</strong> — International Honor Society for Hospitality &amp; Tourism</li>
           </ul>
         </div>
         <div class="edu-card">
-          <h3>Penfield Senior High School</h3>
-          <p class="edu-deg">Academic · 2018 – 2022 · Varsity</p>
+          <h3 data-i18n="exp.edu.ps">Penfield Senior High School</h3>
+          <p class="edu-deg" data-i18n="exp.edu.ps.deg">Academic · 2018 – 2022 · Varsity</p>
         </div>
       </div>
 
       <div class="split-col reveal">
-        <h2>Certifications</h2>
+        <h2 data-i18n="exp.cert.title">Certifications</h2>
         <ul class="cert-list">
-          <li><strong>ServSafe Food Handler</strong> <span>Mar 2024 – Mar 2027</span></li>
-          <li><strong>HubSpot — Social Media Marketing</strong> <span>Apr 2023</span></li>
-          <li><strong>HubSpot — Content Marketing</strong> <span>Apr 2023</span></li>
-          <li><strong>Microsoft Office Specialist: Word</strong> <span>Nov 2021</span></li>
-          <li><strong>Microsoft Office Specialist: PowerPoint</strong> <span>Jan 2022</span></li>
+          <li data-i18n="exp.cert.servsafe" data-i18n-html><strong>ServSafe Food Handler</strong> <span>Mar 2024 – Mar 2027</span></li>
+          <li data-i18n="exp.cert.hsocial" data-i18n-html><strong>HubSpot — Social Media Marketing</strong> <span>Apr 2023</span></li>
+          <li data-i18n="exp.cert.hcontent" data-i18n-html><strong>HubSpot — Content Marketing</strong> <span>Apr 2023</span></li>
+          <li data-i18n="exp.cert.word" data-i18n-html><strong>Microsoft Office Specialist: Word</strong> <span>Nov 2021</span></li>
+          <li data-i18n="exp.cert.ppt" data-i18n-html><strong>Microsoft Office Specialist: PowerPoint</strong> <span>Jan 2022</span></li>
         </ul>
       </div>
     </section>
 
     <section class="skills reveal">
-      <h2>Skills</h2>
+      <h2 data-i18n="exp.skills.title">Skills</h2>
       <div class="skill-grid">
-        <div class="skill"><span>Event Management</span><div class="bar"><i style="--v:95%"></i></div></div>
-        <div class="skill"><span>Customer Service</span><div class="bar"><i style="--v:92%"></i></div></div>
-        <div class="skill"><span>Problem Solving</span><div class="bar"><i style="--v:90%"></i></div></div>
-        <div class="skill"><span>Time Management</span><div class="bar"><i style="--v:88%"></i></div></div>
-        <div class="skill"><span>Communication</span><div class="bar"><i style="--v:88%"></i></div></div>
-        <div class="skill"><span>Microsoft Office</span><div class="bar"><i style="--v:85%"></i></div></div>
-        <div class="skill"><span>Food Safety Mgmt</span><div class="bar"><i style="--v:82%"></i></div></div>
-        <div class="skill"><span>Social / Content Marketing</span><div class="bar"><i style="--v:75%"></i></div></div>
+        <div class="skill"><span data-i18n="tag.eventmgmt">Event Management</span><div class="bar"><i style="--v:95%"></i></div></div>
+        <div class="skill"><span data-i18n="tag.cs">Customer Service</span><div class="bar"><i style="--v:92%"></i></div></div>
+        <div class="skill"><span data-i18n="tag.problem">Problem Solving</span><div class="bar"><i style="--v:90%"></i></div></div>
+        <div class="skill"><span data-i18n="tag.time">Time Management</span><div class="bar"><i style="--v:88%"></i></div></div>
+        <div class="skill"><span data-i18n="tag.comm">Communication</span><div class="bar"><i style="--v:88%"></i></div></div>
+        <div class="skill"><span data-i18n="exp.skill.msoffice">Microsoft Office</span><div class="bar"><i style="--v:85%"></i></div></div>
+        <div class="skill"><span data-i18n="exp.skill.foodmgmt">Food Safety Mgmt</span><div class="bar"><i style="--v:82%"></i></div></div>
+        <div class="skill"><span data-i18n="exp.skill.social">Social / Content Marketing</span><div class="bar"><i style="--v:75%"></i></div></div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> Dominic Andrade · Built for game day.</p>
+    <p>© <span id="year"></span> Dominic Andrade · <span data-i18n="footer.tag">Built for game day.</span></p>
   </footer>
 
   <div id="palette" class="palette" hidden>
     <div class="palette-inner" role="dialog" aria-label="Command palette">
-      <input id="palette-input" type="text" placeholder="Jump to…" autocomplete="off" />
+      <input id="palette-input" type="text" placeholder="Jump to…" data-i18n-attr="placeholder:palette.placeholderShort" autocomplete="off" />
       <ul id="palette-list"></ul>
     </div>
   </div>

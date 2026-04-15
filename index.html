@@ -22,11 +22,14 @@
       <span class="brand-name">Dominic Andrade</span>
     </a>
     <nav class="site-nav" aria-label="Primary">
-      <a href="./index.html" class="nav-link active">Home</a>
-      <a href="./experience.html" class="nav-link">Experience</a>
-      <a href="./resume.html" class="nav-link">Resume</a>
-      <a href="./contact.html" class="nav-link">Contact</a>
+      <a href="./index.html" class="nav-link active" data-i18n="nav.home">Home</a>
+      <a href="./experience.html" class="nav-link" data-i18n="nav.experience">Experience</a>
+      <a href="./resume.html" class="nav-link" data-i18n="nav.resume">Resume</a>
+      <a href="./contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
     </nav>
+    <button id="lang-toggle" class="theme-toggle lang-toggle" aria-label="Toggle language" title="EN / FR">
+      <span class="lang-label">EN</span>
+    </button>
     <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">
       <span class="sun">☀</span><span class="moon">☾</span>
     </button>
@@ -36,47 +39,47 @@
     <section class="hero">
       <div class="hero-grid" aria-hidden="true"></div>
       <div class="hero-inner">
-        <p class="eyebrow">Penfield, NY · Class of 2026</p>
+        <p class="eyebrow" data-i18n="home.eyebrow">Penfield, NY · Class of 2026</p>
         <h1 class="hero-title">
-          Hi, I'm <span id="typed-name" class="accent">Dominic</span>.
-          <br/>I build <span class="accent-alt">game-day experiences</span>.
+          <span data-i18n="home.hi">Hi, I'm </span><span id="typed-name" class="accent">Dominic</span>.
+          <br/><span data-i18n="home.build">I build </span><span class="accent-alt" data-i18n="home.gde">game-day experiences</span>.
         </h1>
-        <p class="hero-sub">
+        <p class="hero-sub" data-i18n="home.sub" data-i18n-html>
           Senior at Niagara University studying Sport Management &amp; Tourism Event Management.
           Recently behind the scenes at <strong>Innovative Field</strong> with the Rochester Red Wings
           and on the grounds at <strong>Midvale Country Club</strong> — still on the ice in club hockey.
         </p>
         <div class="cta-row">
-          <a class="btn primary" href="./experience.html">See my experience →</a>
-          <a class="btn ghost" href="./resume.html">View résumé</a>
-          <a class="btn ghost" href="./contact.html">Get in touch</a>
+          <a class="btn primary" href="./experience.html" data-i18n="home.cta.exp">See my experience →</a>
+          <a class="btn ghost" href="./resume.html" data-i18n="home.cta.resume">View résumé</a>
+          <a class="btn ghost" href="./contact.html" data-i18n="home.cta.contact">Get in touch</a>
         </div>
         <ul class="stat-strip" aria-label="Quick stats">
-          <li><span class="num" data-count="3">0</span><span class="lbl">yrs · Grounds Crew</span></li>
-          <li><span class="num" data-count="80">0</span><span class="lbl">+ Red Wings home games</span></li>
-          <li><span class="num" data-count="10000">0</span><span class="lbl">+ fans hosted per night</span></li>
-          <li><span class="num" data-count="2026" data-raw="true">0</span><span class="lbl">B.S. graduation</span></li>
+          <li><span class="num" data-count="3">0</span><span class="lbl" data-i18n="home.stat.grounds">yrs · Grounds Crew</span></li>
+          <li><span class="num" data-count="80">0</span><span class="lbl" data-i18n="home.stat.games">+ Red Wings home games</span></li>
+          <li><span class="num" data-count="10000">0</span><span class="lbl" data-i18n="home.stat.fans">+ fans hosted per night</span></li>
+          <li><span class="num" data-count="2026" data-raw="true">0</span><span class="lbl" data-i18n="home.stat.grad">B.S. graduation</span></li>
         </ul>
       </div>
     </section>
 
     <section class="section reveal">
-      <h2 class="section-title">What I'm about</h2>
+      <h2 class="section-title" data-i18n="home.about.title">What I'm about</h2>
       <div class="cards">
         <article class="card">
           <div class="card-ico">🏟️</div>
-          <h3>Stadium &amp; Event Ops</h3>
-          <p>From Red Wings home stands to weddings, concerts, and festivals at Innovative Field — I love the choreography behind a clean, on-time event.</p>
+          <h3 data-i18n="home.card1.h">Stadium &amp; Event Ops</h3>
+          <p data-i18n="home.card1.p">From Red Wings home stands to weddings, concerts, and festivals at Innovative Field — I love the choreography behind a clean, on-time event.</p>
         </article>
         <article class="card">
           <div class="card-ico">🧊</div>
-          <h3>Hockey in my blood</h3>
-          <p>Niagara University Club Hockey. LA Kings fan. If it's on ice, I'm watching, playing, or talking about it.</p>
+          <h3 data-i18n="home.card2.h">Hockey in my blood</h3>
+          <p data-i18n="home.card2.p">Niagara University Club Hockey. LA Kings fan. If it's on ice, I'm watching, playing, or talking about it.</p>
         </article>
         <article class="card">
           <div class="card-ico">🌿</div>
-          <h3>Hospitality, end-to-end</h3>
-          <p>Three seasons on a grounds crew, ServSafe certified, and Eta Sigma Delta honor society — hospitality isn't a side quest, it's the main thing.</p>
+          <h3 data-i18n="home.card3.h">Hospitality, end-to-end</h3>
+          <p data-i18n="home.card3.p">Three seasons on a grounds crew, ServSafe certified, and Eta Sigma Delta honor society — hospitality isn't a side quest, it's the main thing.</p>
         </article>
       </div>
     </section>
@@ -104,22 +107,22 @@
     </section>
 
     <section class="section reveal">
-      <h2 class="section-title">A quick highlight</h2>
+      <h2 class="section-title" data-i18n="home.hl.title">A quick highlight</h2>
       <blockquote class="pull-quote">
-        <p>"Tourism students from Niagara University joined inbound operators at <strong>IITA Summit 2026</strong> to experience the sector firsthand — a valuable behind-the-scenes look at how inbound business is built."</p>
-        <cite>— International Inbound Travel Association</cite>
+        <p data-i18n="home.hl.body" data-i18n-html>"Tourism students from Niagara University joined inbound operators at <strong>IITA Summit 2026</strong> to experience the sector firsthand — a valuable behind-the-scenes look at how inbound business is built."</p>
+        <cite data-i18n="home.hl.cite">— International Inbound Travel Association</cite>
       </blockquote>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> Dominic Andrade · Built for game day.</p>
-    <p class="kbd-hint">Try <kbd>⌘</kbd> <kbd>K</kbd> anywhere on the site.</p>
+    <p>© <span id="year"></span> Dominic Andrade · <span data-i18n="footer.tag">Built for game day.</span></p>
+    <p class="kbd-hint" data-i18n="footer.kbd" data-i18n-html>Try <kbd>⌘</kbd> <kbd>K</kbd> anywhere on the site.</p>
   </footer>
 
   <div id="palette" class="palette" hidden>
     <div class="palette-inner" role="dialog" aria-label="Command palette">
-      <input id="palette-input" type="text" placeholder="Jump to… (home, experience, contact, rink, arcade, email, linkedin)" autocomplete="off" />
+      <input id="palette-input" type="text" placeholder="Jump to… (home, experience, contact, rink, arcade, email, linkedin)" data-i18n-attr="placeholder:palette.placeholder" autocomplete="off" />
       <ul id="palette-list"></ul>
     </div>
   </div>

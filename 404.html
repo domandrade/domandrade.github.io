@@ -10,12 +10,16 @@
 <body data-page="404">
   <header class="site-header">
     <a class="brand" href="./index.html"><span class="brand-mark">DA</span><span class="brand-name">Dominic Andrade</span></a>
-    <nav class="site-nav"><a href="./index.html" class="nav-link">Home</a></nav>
+    <nav class="site-nav"><a href="./index.html" class="nav-link" data-i18n="nav.home">Home</a></nav>
+    <button id="lang-toggle" class="theme-toggle lang-toggle" aria-label="Toggle language" title="EN / FR">
+      <span class="lang-label">EN</span>
+    </button>
   </header>
   <main class="container narrow" style="text-align:center; padding-top: 80px;">
-    <h1 style="font-size: 4rem; margin:0;">Offside.</h1>
-    <p class="lead" style="margin: 12px auto 24px;">That page doesn't exist — let's get you back in the play.</p>
-    <a class="btn primary" href="./index.html">← Back home</a>
+    <h1 style="font-size: 4rem; margin:0;" data-i18n="err.h">Offside.</h1>
+    <p class="lead" style="margin: 12px auto 24px;" data-i18n="err.p">That page doesn't exist — let's get you back in the play.</p>
+    <a class="btn primary" href="./index.html" data-i18n="err.back">← Back home</a>
   </main>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>

@@ -97,6 +97,8 @@ a:hover { color: var(--accent-2); }
 .theme-toggle .moon { display: none; }
 [data-theme="light"] .theme-toggle .sun { display: none; }
 [data-theme="light"] .theme-toggle .moon { display: inline; }
+.lang-toggle { width: auto; padding: 0 10px; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em; }
+.lang-toggle .lang-label { line-height: 1; }
 
 /* ===== Main & sections ===== */
 main { position: relative; z-index: 1; }
